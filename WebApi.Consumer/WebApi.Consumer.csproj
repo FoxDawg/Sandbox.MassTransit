@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Messaging.Contract\Messaging.Contract.csproj" />
+      <ProjectReference Include="..\Messaging.Core\Messaging.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MassTransit.Abstractions" Version="8.0.9" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="WebApi.Consumer.Tests" />
+    </ItemGroup>
+
+</Project>
