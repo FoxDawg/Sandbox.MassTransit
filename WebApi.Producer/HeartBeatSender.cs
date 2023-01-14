@@ -30,7 +30,7 @@ public class HeartBeatSender : IHostedService
                 {
                     await Task.Delay(TimeSpan.FromSeconds(3), cancellationToken);
                     var heartBeat = new HeartBeat();
-                    await messageBus.Publish(new HeartBeat(), cancellationToken);
+                    await messageBus.Publish(heartBeat, cancellationToken);
                     this.logger.LogInformation("Sent heartbeat {Timestamp}", heartBeat.Timestamp);
                     
                 }
